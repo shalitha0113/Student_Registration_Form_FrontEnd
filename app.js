@@ -43,3 +43,39 @@ function register() {
         .catch(error => console.log('error', error));
 
 }
+
+//------------------Student View Form --------------------------------------------------
+//let studentTable = document.getElementById("tbl-student");
+
+//Fetch(Get Request)
+let studentTable=document.getElementById("tbl-student");
+fetch("http://localhost:8080/student")
+.then(response=>response.json())
+.then(res=>{
+    let tblBody=`<tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Birthday</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Tel No</th>
+                    <th>Batch</th>
+                  </tr>`
+    res.forEach(element =>{
+        tblBody+=`<tr>
+                    <td>${element.id}</td>
+                    <td>${element.firstName}</td>
+                    <td>${element.lastName}</td>
+                    <td>${element.email}</td>
+                    <td>${element.dob}</td>
+                    <td>${element.gender}</td>
+                    <td>${element.address}</td>
+                    <td>${element.telNo}</td>
+                    <td>${element.batch}</td>
+                  </tr>`
+    })
+    studentTable.innerHTML=tblBody;
+
+})
