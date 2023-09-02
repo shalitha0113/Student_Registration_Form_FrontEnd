@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+.all-content{
+    background: #f7f5f7;
+}
+
+html ::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: #e7e4e2;
+    border-radius: 10px;
+}
+
+html ::-webkit-scrollbar{
+    width: 10px;
+}
+
+/*Navigation Bar - start*/
+#navbar{
+    background-color: #f0ebe8;
+}
+
+#logo img{
+    border-radius: 10px;
+    width: 40px;
+    margin-left: 20px;
+}
+
+.navbar-nav{
+    margin-left: 5px;
+}
+
+.nav-item .nav-link{
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+    transition:0.5s
+}
+
+.nav-item .nav-link:hover{
+    background: #a7b5f1;
+    border-radius: 5px;
+    color: black;
+}
+/*Navigation Bar - end*/
+
+#home{
+    width: 100%;
+    height: 90vh;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./university\ image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content{
+    padding-top: 160px;
+    margin-left: 56px;
+  }
+
+  .content h3{
+    font-size: 50px;
+    color: azure;
+  }
+  
+  .content p{
+    margin-top: 10px;
+    color: #f7f5f7;
+  }
+
+  #register-btn{
+    width: 120px;
+    height: 36px;
+    margin-top: 5px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+/*Home Section -end*/
+
+
+/*Popup Registration Form*/
+.popup-register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.00);
+    width: 400px;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.popup-register.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.popup-register .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 15px;
+    width: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup-register .form h3{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+.popup-register .tbl-form{
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+    margin: 10px ;
+    padding: 5px;
+}
+
+.popup-register .tbl-form input[type="text"],
+.popup-register .tbl-form input[type="date"],
+.popup-register .tbl-form input[type="email"]{
+    border-radius: 5px;
+    margin: 5px;
+    border-color:#888;
+}
+
+.popup-register .tbl-form .gender{
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.popup-register .form .tbl-form tr{
+    height: 40px;
+}
+
+.popup-register .form .tbl-form td{
+    margin-left:10px ;
+}
+
+.popup-register .form .btn-reg button{
+    width: 80%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #48a8f7;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 40px;
+
+}
+

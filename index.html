@@ -1,19 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Icon Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <h1>Home Page</h1>
-    <table>
-        <tr><td><a href="registration_form.html">Register</a></td></tr>
-        <tr><td><a href="student_view.html">Students List</a></td></tr>
-    </table>
-    
 
-    <script src="app.js"></script>
+<body>
+    <!--Navigation Bar-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="container">
+                        <a class="navbar-brand" href="#" id="logo"><img src="assets/without name.png" alt="Bootstrap"
+                                width="40" height="40"></a>
+                        <a class="navbar-brand" href="#">AUAXX University </a>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home" onclick="update()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student_view.html">Members</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"> Certified in Software Engineering</a></li>
+                            <li><a class="dropdown-item" href="#">Diploma in Software Engineering</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">BSc (Hons) in Software Engineering</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="registration_form.html"><button class="btn btn-success me-md-2"
+                                type="button">Register</button></a>
+                        <button class="btn btn-primary btn-md" type="button">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Home Page -->
+    <section id="home">
+        <div class="content">
+            <h3>Path to achieve your dreams</h3>
+            <p>The world needs certified software developers, why not be one yourself?<br> Kickstart your career in the
+                IT Software Industry today.<br> No prior experience required.</p>
+            <a ><button id="register-btn">Register Now</button></a>
+        </div>
+    </section>
+
+    <!-- Popup Registration form -->
+    <div class="popup-register">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h3>Registration</h3>
+            <table class="tbl-form">
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="firstName" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>:</td>
+                    <td><input type="text" id="lastName" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>:</td>
+                    <td><input type="email" name="email" id="email" placeholder="email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="dob">Birth Day</label></td>
+                    <td>:</td>
+                    <td><input type="date" name="dob" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td>:</td>
+                    <td><select name="gender" class="gender" id="gender">
+                            <option value=""></option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="address" placeholder="Address"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="telNo">Contact No</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="telNo" placeholder="Contact No"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="batch">Batch</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="batch" placeholder="Batch"></td>
+                </tr>
+
+            </table>
+            <div class="btn-reg">
+                <button  onclick="register()">Register</button> 
+                <!-- <input type="button" onclick="register()" value="Register"> -->
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-logo text-center"><img src="" alt=""></div>
+        <div class="credite text-center">
+            Designed By <a href="#">Shalitha Morapitiya</a>
+        </div>
+        <div class="copyright text-center">
+            &copy; Copyright <strong><span>AUAXXUniversity</span></strong>. All Rights Reserved
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="JS/app.js"></script>
 </body>
+
 </html>
