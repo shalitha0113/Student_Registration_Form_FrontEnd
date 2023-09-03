@@ -1,10 +1,5 @@
 `use Strict`;
 
-//Access Registration Form
-function accessRegistration(){
-    
-}
-
 function Student(firstName, lastName,email,dob,gender,address,telNo, batch) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -32,8 +27,8 @@ function register() {
     console.log(student);
 
     //Fetch (POST Request)
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    //var myHeaders = new Headers();
+    new Headers().append("Content-Type", "application/json");
 
     var requestOptions = {
         method: 'POST',
@@ -59,8 +54,7 @@ fetch("http://localhost:8080/student")
 .then(res=>{
     let tblBody=`<tr>
                     <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>Birthday</th>
                     <th>Gender</th>
@@ -72,8 +66,7 @@ fetch("http://localhost:8080/student")
     res.forEach(element =>{
         tblBody+=`<tr>
                     <td>${element.id}</td>
-                    <td>${element.firstName}</td>
-                    <td>${element.lastName}</td>
+                    <td>${element.firstName} ${element.lastName}</td>
                     <td>${element.email}</td>
                     <td>${element.dob}</td>
                     <td>${element.gender}</td>
@@ -86,16 +79,6 @@ fetch("http://localhost:8080/student")
     studentTable.innerHTML=tblBody;
 
 })
-
-function update(){
-    
-
-}
-
-function deleteId(id){
-
-}
-
 
 /*Login form view */ 
 document.querySelector("#register-btn").addEventListener("click",function(){
