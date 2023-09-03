@@ -56,10 +56,9 @@ fetch("http://localhost:8080/student")
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Birthday</th>
-                    <th>Gender</th>
+                   
                     <th>Address</th>
-                    <th>Tel No</th>
+                   
                     <th>Batch</th>
                     
                   </tr>`
@@ -68,10 +67,9 @@ fetch("http://localhost:8080/student")
                     <td>${element.id}</td>
                     <td>${element.firstName} ${element.lastName}</td>
                     <td>${element.email}</td>
-                    <td>${element.dob}</td>
-                    <td>${element.gender}</td>
+           
                     <td>${element.address}</td>
-                    <td>${element.telNo}</td>
+                
                     <td>${element.batch}</td>
                     
                   </tr>`
