@@ -104,7 +104,7 @@ document.querySelector(".popup-register .close-btn").addEventListener("click", f
 
 
 /* Search function  */
-function search() {
+function searchByName() {
     let searchVal = document.getElementById("searchTxt").value;
     alert(searchVal);
 
@@ -125,7 +125,7 @@ function search() {
                     <td>Batch</td>
                   </tr>`
 
-    fetch(`http://localhost:8080/student/${searchVal}`, requestOptions)
+    fetch(`http://localhost:8080/student/stu/${searchVal}`, requestOptions)
         .then(response => response.json())
         .then(result => {
             result.forEach((element) => {
@@ -144,6 +144,49 @@ function search() {
         })
         .catch(error => console.log('error', error));
 }
+
+//-----Search by Batch
+function searchByBatch() {
+    let searchVal2 = document.getElementById("searchTxt_batch").value;
+    alert(searchVal2);
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+  
+    var requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+
+    let tBody = `<tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Address</td>
+                    <td>Batch</td>
+                  </tr>`
+
+    fetch(`http://localhost:8080/student/stu-batch/${searchVal2}`, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            result.forEach((element) => {
+                tBody += `<tr>
+                    <td>${element.id}</td>
+                    <td>${element.firstName} ${element.lastName}</td>
+                    <td>${element.email}</td>
+                    <td>${element.address}</td>
+                    <td>${element.batch}</td>
+                    <td><button id="delete" onclick="deleteById(${element.id})" >Delete</button></td>
+                    <td><button onclick="updateById(${element.id})" >Update</button></td>
+                    <td><button onclick="viewById(${element.id})" >View</button></td>
+                  </tr>`
+            })
+            studentTable.innerHTML = tBody;
+        })
+        .catch(error => console.log('error', error));
+}
+
 
 
 /*Delete Option */
