@@ -183,7 +183,19 @@ html ::-webkit-scrollbar{
 }
 
 .tbl-student_view{
-    width: 600px;
-    
+    width: 800px;
+    position: relative;
+    left: 20px;
 }
 
+.h3{
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    left: 200px;
+}
+
+.searchPanel{
+    position: relative;
+    left: 50px;
+}

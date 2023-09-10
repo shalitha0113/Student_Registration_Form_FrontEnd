@@ -64,16 +64,21 @@
         </div>
     </nav>
 
-    <div class="tbl-student_view">
-        <table class="table table-striped" id="tbl-student">
+    <h3 class="h3">Registered Student List </h3>
 
-        </table>
+    <div class="searchPanel">
+        <input type="text" placeholder="search " id="searchTxt">
+        <button onclick="search()">Search</button>
+    </div>
+
+    <div class="tbl-student_view">
+        <table class="table table-hover" id="tblStudent2"></table>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="JS/app.js"></script>
+    <script src="JS/app.js"></script>   
 </body>
 
 </html>
