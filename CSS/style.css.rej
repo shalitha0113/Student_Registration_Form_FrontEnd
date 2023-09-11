@@ -1,0 +1,25 @@
+diff a/CSS/style.css b/CSS/style.css	(rejected hunks)
+@@ -199,3 +199,23 @@
+     position: relative;
+     left: 50px;
+ }
++
++.view-form{
++    position: absolute;
++    top: 50%;
++    left: 73%;
++    transform: translate(-50%,-50%) scale(1.00);
++    width: 480px;
++    padding: 20px 30px;
++    background-color: #fff;
++    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
++    border-radius: 10px;
++    
++}
++
++.view-form-table{
++    width: 200;
++}
++
++
++
