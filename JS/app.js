@@ -81,8 +81,7 @@ function loadtable() {
                     <td>${element.address}</td>
                     <td>${element.batch}</td>
                     <td><button onclick="viewById(${element.id})" >View</button></td>
-                    <td><button onclick="deleteById(${element.id})" ></button></td>
-                    <td><button onclick="updateById(${element.id})" ></button></td>
+
                     
                   </tr>`
             })
@@ -226,7 +225,7 @@ function viewById(id) {
         .then(data => {
             let tblBody2 = `
                             <tr>
-                                <th><label >ID</label></th>  
+                                <th style="text-align:right;font-size:18"><label >ID</label></th>  
                                 <th>${data.id}</th>
                             </tr>
                             <tr>

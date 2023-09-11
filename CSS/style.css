@@ -79,13 +79,14 @@ html ::-webkit-scrollbar{
     width: 120px;
     height: 36px;
     margin-top: 5px;
-    background: white;
+    background: rgb(247, 250, 245);
     border-radius: 5px;
     font-weight: bold;
     border: none;
     transition: 0.5s ease;
     cursor: pointer;
   }
+
 
 /*Home Section -end*/
 
@@ -205,11 +206,36 @@ html ::-webkit-scrollbar{
     top: 50%;
     left: 73%;
     transform: translate(-50%,-50%) scale(1.00);
-    width: 480px;
+    width: 350px;
     padding: 20px 30px;
     background-color: #fff;
-    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
     border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.view-form.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.view-form .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 15px;
+    width: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
     
 }
 
@@ -217,5 +243,6 @@ html ::-webkit-scrollbar{
     width: 200;
 }
 
-
-
+.td{
+    width: 25px;
+}
