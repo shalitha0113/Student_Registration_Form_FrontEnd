@@ -60,6 +60,10 @@ document.querySelector("#register-btn2").addEventListener("click", function () {
     document.querySelector(".popup-register").classList.add("active");
 });
 
+document.querySelector("#register-btn3").addEventListener("click", function () {
+    document.querySelector(".popup-register").classList.add("active");
+});
+
 document.querySelector(".popup-register .close-btn").addEventListener("click", function () {
     document.querySelector(".popup-register").classList.remove("active");
 });

@@ -3,6 +3,7 @@
 //let studentTable = document.getElementById("tbl-student");
 
 
+
 //Table Body
 let tblBody = `<tr>
                     <td>ID</td>
@@ -62,7 +63,7 @@ document.querySelector(".popup-register .close-btn").addEventListener("click", f
 /* Search function  */
 function searchByName() {
     let searchVal = document.getElementById("searchTxt").value;
-    alert(searchVal);
+    
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -91,8 +92,6 @@ function searchByName() {
                     <td>${element.email}</td>
                     <td>${element.address}</td>
                     <td>${element.batch}</td>
-                    <td><button id="delete" onclick="deleteById(${element.id})" >Delete</button></td>
-                    <td><button onclick="updateById(${element.id})" >Update</button></td>
                     <td><button onclick="viewById(${element.id})" >View</button></td>
                   </tr>`
             })
@@ -104,7 +103,7 @@ function searchByName() {
 //-----Search by Batch
 function searchByBatch() {
     let searchVal2 = document.getElementById("searchTxt_batch").value;
-    alert(searchVal2);
+    
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -133,8 +132,6 @@ function searchByBatch() {
                     <td>${element.email}</td>
                     <td>${element.address}</td>
                     <td>${element.batch}</td>
-                    <td><button id="delete" onclick="deleteById(${element.id})" >Delete</button></td>
-                    <td><button onclick="updateById(${element.id})" >Update</button></td>
                     <td><button id="view-form-id" onclick="viewById(${element.id})" >View</button></td>
                   </tr>`
             })

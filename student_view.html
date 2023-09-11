@@ -55,9 +55,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a ><button class="btn btn-success me-md-2"
-                                type="button">Register</button></a>
-                        <button class="btn btn-primary btn-md" type="button">Sign in</button>
+                    
                     </div>
                 </form>
             </div>
@@ -68,10 +66,10 @@
 
     <div class="searchPanel">
         <input type="text" placeholder="Search by First Name " id="searchTxt">
-        <button onclick="searchByName()">Search</button>
+        <button class="searchtext-btn" onclick="searchByName()">Search</button>
 
         <input type="text" placeholder="Search by Batch " id="searchTxt_batch">
-        <button onclick="searchByBatch()">Search</button>
+        <button class="searchTxt_batch-btn" onclick="searchByBatch()">Search</button>
     </div>
 
     <div class="tbl-student_view">
@@ -93,7 +91,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="JS/view.js"></script>   
+    <script src="JS/view.js"></script>
+  
 </body>
 
 </html>

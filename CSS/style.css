@@ -183,10 +183,12 @@ html ::-webkit-scrollbar{
 
 }
 
+/* Student View Form */
 .tbl-student_view{
     width: 800px;
-    position: relative;
+    position: absolute;
     left: 20px;
+    top:170px;
 }
 
 .h3{
@@ -194,11 +196,17 @@ html ::-webkit-scrollbar{
     font-size: 18px;
     position: relative;
     left: 200px;
+    top:30px;
 }
 
 .searchPanel{
     position: relative;
-    left: 50px;
+    left: 70px;
+    top: 50px;
+}
+
+.searchtext-btn{
+    top: 50px;
 }
 
 .view-form{
